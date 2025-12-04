@@ -69,5 +69,5 @@ data "aws_ssm_parameter" "al2" {
 
 resource "aws_key_pair" "jenkins_key" {
   key_name   = "jenkins-key"      # Name of the key pair
-  public_key = file("~/.ssh/id_rsa.pub")  # Path to your public key
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqoH6Sy/4kVtJRVj/d3sjNZRG87zTeW2YWP/965liCz"  # Path to your public key
 }
