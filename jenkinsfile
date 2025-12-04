@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage("Checkout") {
+            steps {
+                git 'https://github.com/sandeeplv88/aws-terraform.git'
+            }
+        }
+        stage("Terraform init") {
+            steps {
+                sh 'terraform init'
+            }
+        }
+        stage("Terraform plan") {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+    }
+}
